@@ -7,8 +7,9 @@
 //
 
 #import "RAViewController.h"
-
-@interface RAViewController ()
+#import "RARecipes.h"
+#import "RARecipesTableViewDataSource.h"
+@interface RAViewController () <UITableViewDataSource>
 
 @end
 
@@ -19,6 +20,10 @@
     // Do any additional setup after loading the view.
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:tableView];
+    // add DataSource
+    tableView.dataSource = [[RARecipesTableViewDataSource alloc] init];
+    // Deque
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"My cell"];
 }
 
 - (void)didReceiveMemoryWarning {
