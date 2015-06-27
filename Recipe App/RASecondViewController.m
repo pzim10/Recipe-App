@@ -7,16 +7,30 @@
 //
 
 #import "RASecondViewController.h"
+#import "RARecipes.h"
+#import "RARecipesTableViewDataSource.h"
 
 @interface RASecondViewController ()
 
+@property (nonatomic, assign) NSInteger recipeIndex;
+@property (nonatomic, strong) UITableView *info; //, *ingredients, *directions;
+@property (nonatomic, strong) RARecipesTableViewDataSource *infoSource;
+
 @end
 
+const int topMargin = 15;
 @implementation RASecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.infoSource = [RARecipesTableViewDataSource new];
+
+    self.info = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+    self.info.dataSource = self.infoSource;
+    [self.view addSubview:self.info];
+    [self.info registerClass:[UITableViewCell class] forCellReuseIdentifier:@"My cell"];
 }
 
 - (void)didReceiveMemoryWarning {
