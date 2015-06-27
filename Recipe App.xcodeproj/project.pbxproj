@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2820024E1B3F1B0400B87738 /* RASecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2820024D1B3F1B0400B87738 /* RASecondViewController.m */; };
+		282002511B3F343000B87738 /* RASecondViewControllerDS.m in Sources */ = {isa = PBXBuildFile; fileRef = 282002501B3F343000B87738 /* RASecondViewControllerDS.m */; };
 		28B4CFB11B3E11BD00E632EB /* RAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B4CFB01B3E11BD00E632EB /* RAViewController.m */; };
 		28B4CFB41B3E135100E632EB /* RARecipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B4CFB31B3E135100E632EB /* RARecipes.m */; };
 		28B4CFB71B3E158500E632EB /* RARecipesTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B4CFB61B3E158500E632EB /* RARecipesTableViewDataSource.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2820024C1B3F1B0400B87738 /* RASecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RASecondViewController.h; sourceTree = "<group>"; };
+		2820024D1B3F1B0400B87738 /* RASecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RASecondViewController.m; sourceTree = "<group>"; };
+		2820024F1B3F343000B87738 /* RASecondViewControllerDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RASecondViewControllerDS.h; sourceTree = "<group>"; };
+		282002501B3F343000B87738 /* RASecondViewControllerDS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RASecondViewControllerDS.m; sourceTree = "<group>"; };
 		28B4CFAF1B3E11BD00E632EB /* RAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAViewController.h; sourceTree = "<group>"; };
 		28B4CFB01B3E11BD00E632EB /* RAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAViewController.m; sourceTree = "<group>"; };
 		28B4CFB21B3E135100E632EB /* RARecipes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RARecipes.h; sourceTree = "<group>"; };
@@ -120,10 +126,14 @@
 				71F67B60192C8D6A00E609F1 /* RAAppDelegate.m */,
 				28B4CFAF1B3E11BD00E632EB /* RAViewController.h */,
 				28B4CFB01B3E11BD00E632EB /* RAViewController.m */,
+				2820024C1B3F1B0400B87738 /* RASecondViewController.h */,
+				2820024D1B3F1B0400B87738 /* RASecondViewController.m */,
 				28B4CFB21B3E135100E632EB /* RARecipes.h */,
 				28B4CFB31B3E135100E632EB /* RARecipes.m */,
 				28B4CFB51B3E158500E632EB /* RARecipesTableViewDataSource.h */,
 				28B4CFB61B3E158500E632EB /* RARecipesTableViewDataSource.m */,
+				2820024F1B3F343000B87738 /* RASecondViewControllerDS.h */,
+				282002501B3F343000B87738 /* RASecondViewControllerDS.m */,
 				71F67B62192C8D6A00E609F1 /* Images.xcassets */,
 				71F67B57192C8D6A00E609F1 /* Supporting Files */,
 			);
@@ -259,7 +269,9 @@
 				71F67B5D192C8D6A00E609F1 /* main.m in Sources */,
 				28B4CFB71B3E158500E632EB /* RARecipesTableViewDataSource.m in Sources */,
 				71F67B61192C8D6A00E609F1 /* RAAppDelegate.m in Sources */,
+				282002511B3F343000B87738 /* RASecondViewControllerDS.m in Sources */,
 				28B4CFB11B3E11BD00E632EB /* RAViewController.m in Sources */,
+				2820024E1B3F1B0400B87738 /* RASecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

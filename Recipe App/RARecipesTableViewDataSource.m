@@ -19,6 +19,13 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"My cell"];
     cell.textLabel.text = [RARecipes titleAtIndex: indexPath.row];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
+}
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if(section == 0){
+        return @"Recipes.com";
+    }
+    else return nil;
 }
 @end

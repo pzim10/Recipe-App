@@ -7,9 +7,10 @@
 //
 
 #import "RAViewController.h"
+#import "RASecondViewController.h"
 #import "RARecipes.h"
 #import "RARecipesTableViewDataSource.h"
-@interface RAViewController () <UITableViewDataSource>
+@interface RAViewController () <UITableViewDelegate>
 @property (nonatomic, strong) RARecipesTableViewDataSource *mySource;
 @end
 
@@ -17,12 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"My Recipes";
     // Do any additional setup after loading the view.
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
     [self.view addSubview:tableView];
     // add DataSource
     self.mySource = [RARecipesTableViewDataSource new];
     tableView.dataSource =self.mySource;
+    tableView.delegate = self;
     // Deque
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"My cell"];
 }
@@ -32,6 +35,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    RASecondViewController *controller = [RASecondViewController new];
+    controller.navigationItem.title = [RARecipes titleAtIndex:indexPath.row];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 30;
+    } else {
+        return 44;
+    }
+}
 /*
 #pragma mark - Navigation
 
