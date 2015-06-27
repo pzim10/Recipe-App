@@ -10,7 +10,7 @@
 #import "RARecipes.h"
 #import "RARecipesTableViewDataSource.h"
 @interface RAViewController () <UITableViewDataSource>
-
+@property (nonatomic, strong) RARecipesTableViewDataSource *mySource;
 @end
 
 @implementation RAViewController
@@ -21,7 +21,8 @@
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:tableView];
     // add DataSource
-    tableView.dataSource = [[RARecipesTableViewDataSource alloc] init];
+    self.mySource = [RARecipesTableViewDataSource new];
+    tableView.dataSource =self.mySource;
     // Deque
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"My cell"];
 }
